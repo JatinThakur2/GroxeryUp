@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AddProductActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_rect01"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Add Product"
+            android:textColor="@color/colorWhite"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                android:id="@+id/productIV"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_add_procuct_primary"
+                app:c_border="true"
+                app:c_border_color="@color/colorPrimary"
+                app:c_border_width="1dp" />
+
+            <EditText
+                android:id="@+id/titleET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productIV"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_title_gray"
+                android:drawableLeft="@drawable/ic_title_gray"
+                android:drawablePadding="10dp"
+                android:hint="Title"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/descriptionET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleET"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_title_gray"
+                android:drawableLeft="@drawable/ic_title_gray"
+                android:drawablePadding="10dp"
+                android:hint="Description"
+                android:inputType="textCapSentences|textMultiLine"
+                android:padding="10dp" />
+
+
+            <EditText
+                android:id="@+id/categoryTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descriptionET"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_category_gray"
+                android:drawableLeft="@drawable/ic_category_gray"
+                android:drawableEnd="@drawable/ic_dowm_gray"
+                android:drawableRight="@drawable/ic_dowm_gray"
+                android:drawablePadding="10dp"
+                android:hint="Category Fee"
+                android:inputType="textCapSentences|textMultiLine"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/quantityET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categoryTV"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_quantity_gray"
+                android:drawableLeft="@drawable/ic_quantity_gray"
+                android:drawablePadding="10dp"
+                android:hint="Quantity e.g kg, ltr etc."
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/priceET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quantityET"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_price_gray"
+                android:drawableLeft="@drawable/ic_price_gray"
+                android:drawablePadding="5dp"
+                android:hint="Price"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/discountSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceET"
+                android:layout_margin="5dp"
+                android:text="Discount" />
+
+            <EditText
+                android:id="@+id/discountPriceET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discountSwitch"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_price_gray"
+                android:drawableLeft="@drawable/ic_price_gray"
+                android:drawablePadding="5dp"
+                android:hint="Discount Price"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/discountPercentTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discountPriceET"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_price_gray"
+                android:drawableLeft="@drawable/ic_price_gray"
+                android:drawablePadding="5dp"
+                android:hint="Discount Percent e.g. 10% Off"
+                android:inputType="textCapSentences"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/addProductBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discountPercentTV"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:minWidth="150dp"
+                android:text="Add Product"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
